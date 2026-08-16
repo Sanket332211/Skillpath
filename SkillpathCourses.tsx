@@ -158,7 +158,7 @@ export default function SkillpathCourses(props: SkillpathCoursesProps) {
     <section id="courses" style={styles.sectionContainer}>
       <style>{responsiveStyles}</style>
 
-      <div style={styles.contentWrapper}>
+      <div className="skillpath-content-wrapper" style={styles.contentWrapper}>
         {/* Section Header */}
         <header style={styles.header}>
           <p style={styles.subheading}>Curated Curriculum</p>
@@ -354,7 +354,6 @@ const styles: { [key: string]: React.CSSProperties } = {
   },
   grid: {
     display: "grid",
-    gap: "28px",
     width: "100%",
   },
   card: {
@@ -439,10 +438,29 @@ const styles: { [key: string]: React.CSSProperties } = {
   },
 }
 
-// Scoped media queries for 3-col Desktop, 2-col Tablet, 1-col Mobile
+// Scoped container queries & media queries for 3-col Desktop, 2-col Tablet, 1-col Mobile
 const responsiveStyles = `
+  .skillpath-content-wrapper {
+    container-type: inline-size;
+  }
+
   .skillpath-course-grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+
+  @container (max-width: 1024px) {
+    .skillpath-course-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+  }
+
+  @container (max-width: 640px) {
+    .skillpath-course-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
   }
 
   @media (max-width: 1024px) {
