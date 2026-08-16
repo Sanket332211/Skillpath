@@ -1,4 +1,5 @@
 import * as React from "react"
+import { addPropertyControls } from "framer"
 import SkillpathCourses from "./SkillpathCourses"
 
 export default function SkillpathLandingPage() {
@@ -84,6 +85,9 @@ export default function SkillpathLandingPage() {
     </div>
   )
 }
+
+// Framer Property Controls Registration to ensure detection by Framer's code-component indexer
+addPropertyControls(SkillpathLandingPage, {})
 
 const pageStyles: { [key: string]: React.CSSProperties } = {
   pageWrapper: {
