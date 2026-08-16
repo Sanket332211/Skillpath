@@ -1,6 +1,7 @@
 import * as React from "react"
 import { addPropertyControls } from "framer"
 import SkillpathCourses from "./SkillpathCourses"
+import { LOGO_DATA_URI } from "./logoData"
 
 export default function SkillpathLandingPage() {
   const scrollToCourses = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -20,7 +21,7 @@ export default function SkillpathLandingPage() {
         <div style={pageStyles.navContainer}>
           <a href="#" style={pageStyles.brandLogo}>
             <img
-              src="/logo.png"
+              src={LOGO_DATA_URI}
               alt="Skillpath Logo"
               className="skillpath-brand-icon"
               style={pageStyles.brandIcon}
