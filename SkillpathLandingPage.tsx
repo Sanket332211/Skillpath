@@ -92,14 +92,13 @@ addPropertyControls(SkillpathLandingPage, {})
 
 const pageStyles: { [key: string]: React.CSSProperties } = {
   pageWrapper: {
-    minHeight: "100vh",
+    width: "100%",
     backgroundColor: "#0D0B33", // Deep Indigo dominant root
     color: "#FFFFFF",
     fontFamily:
       '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
     display: "flex",
     flexDirection: "column",
-    overflowX: "hidden",
   },
   navbar: {
     width: "100%",
@@ -201,7 +200,7 @@ const pageStyles: { [key: string]: React.CSSProperties } = {
     transition: "background-color 0.15s ease",
   },
   footerSection: {
-    marginTop: "auto",
+    marginTop: 0,
     borderTop: "1px solid #1F1A4D",
     backgroundColor: "#0D0B33", // Deep Indigo
     padding: "56px 24px",
